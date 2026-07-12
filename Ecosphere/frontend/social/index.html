@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoSphere: Social - CSR & Engagement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../login/images/logo.png" class="logo" alt="EcoSphere">
+      <span class="brand-title">EcoSphere: Social</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <button class="btn btn--blue" id="new-activity">+ New Activity</button>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>🌳 Tree Plantation</h3>
+        <p class="meta">24 joined • Evidence Required</p>
+        <button class="btn btn--outline" data-join>Join</button>
+      </article>
+
+      <article class="card">
+        <h3>🩸 Blood Donation</h3>
+        <p class="meta">18 joined • Evidence Required</p>
+        <button class="btn btn--outline" data-join>Join</button>
+      </article>
+
+      <article class="card">
+        <h3>🏖️ Beach Cleanup</h3>
+        <p class="meta">31 joined • Open</p>
+        <button class="btn btn--outline" data-join>Join</button>
+      </article>
+
+      <article class="card">
+        <h3>📚 ESG Workshop</h3>
+        <p class="meta">52 joined • Open</p>
+        <button class="btn btn--outline" data-join>Join</button>
+      </article>
+    </section>
+
+    <section class="approval">
+      <h2>Employee Participation: approval queue</h2>
+      <table class="approval-table">
+        <thead>
+          <tr><th>Employee</th><th>Activity/Challenge</th><th>Proof</th><th>Points</th><th>Approval</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aditi Rao</td>
+            <td>Tree Plantation</td>
+            <td>photo.jpg</td>
+            <td>50</td>
+            <td><span class="badge badge--pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>Karan Shah</td>
+            <td>ESG Workshop</td>
+            <td>slides.pdf</td>
+            <td>30</td>
+            <td><span class="badge badge--approved">Approved</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="actions">
+        <button class="btn btn--green" id="approve">Approve</button>
+        <button class="btn btn--red" id="reject">Reject</button>
+      </div>
+    </section>
+
+  <script src="script.js"></script>
+  </main>
+</body>
+</html>

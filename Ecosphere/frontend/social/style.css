@@ -1,0 +1,24 @@
+:root{--bg:#f7fbff;--card:#fff;--muted:#5b6b7a;--blue:#1273d0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f1724}
+.topbar{display:flex;align-items:center;padding:12px 18px;background:linear-gradient(180deg,#23282b,#2b2f33);color:#fff}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px}
+.container{padding:18px}
+.hero{margin-bottom:14px}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+.btn--blue{background:var(--blue);color:#fff}
+.btn--outline{background:#fff;border:2px solid var(--blue);color:var(--blue);padding:8px 12px;border-radius:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:18px}
+.card{background:var(--card);padding:14px;border-radius:18px;border:2px solid rgba(18,115,208,0.12)}
+.card h3{margin:0 0 8px 0}
+.meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+.approval h2{margin:0 0 10px 0}
+.approval-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 6px 12px rgba(15,23,42,0.04)}
+.approval-table th,.approval-table td{padding:10px 12px;border-bottom:1px solid rgba(0,0,0,0.04);text-align:left}
+.badge{padding:6px 10px;border-radius:999px;font-weight:700}
+.badge--pending{background:#fff7e6;border:2px solid #f59e0b;color:#9a5800}
+.badge--approved{background:#e6fff0;border:2px solid #2e7d32;color:#1b5e20}
+.actions{margin-top:12px;display:flex;gap:10px}
+
+@media(max-width:700px){.cards{grid-template-columns:1fr}}
