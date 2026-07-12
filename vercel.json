@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/$", "dest": "/Ecosphere/frontend/app.html" },
+    { "src": "^/(.*)$", "dest": "/Ecosphere/frontend/$1" }
+  ],
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "Ecosphere/frontend/**", "use": "@vercel/static" }
+  ]
+}

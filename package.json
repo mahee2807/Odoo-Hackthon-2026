@@ -1,0 +1,11 @@
+{
+  "name": "odoo-hackthon-2026",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "vercel-build": "echo 'No build step; static files served from /Ecosphere/frontend'"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.0"
+  }
+}
