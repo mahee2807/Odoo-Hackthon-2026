@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function(){
     logoutBtn.textContent = 'Logout';
     logoutBtn.className = 'btn';
 	
-    // Determine API base: local backend on port 3000 when developing, otherwise relative
-    const API_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:3000' : '';
+    // Determine API endpoints to try. When developing locally, try both localhost and 127.0.0.1.
+    const API_ENDPOINTS = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+      ? ['http://127.0.0.1:3000', 'http://localhost:3000', '']
+      : [''];
 	
     function isAuth(){ return !!localStorage.getItem('ecosphere.token'); }
     function showOverlay(show){ if(!overlay) return; overlay.style.display = show ? 'flex' : 'none'; }
@@ -49,23 +51,39 @@ document.addEventListener('DOMContentLoaded', function(){
       topbarLeft.appendChild(logoutBtn);
     }
 	
+    const loginErrorEl = document.getElementById('login-error');
+    function setLoginError(msg){
+      if(!loginErrorEl) return; loginErrorEl.textContent = msg; loginErrorEl.style.display = msg ? 'block' : 'none';
+    }
+
     async function doLogin(email, password){
-      try{
-        const res = await fetch(`${API_BASE}/api/auth/login`, {
-          method: 'POST', headers: { 'Content-Type':'application/json' },
-          body: JSON.stringify({ email, password })
-        });
-        const data = await res.json();
-        if(!res.ok) return Promise.reject(data.error || 'Login failed');
-        // save token and user
-        localStorage.setItem('ecosphere.token', data.token);
-        localStorage.setItem('ecosphere.user', JSON.stringify(data.user));
-        localStorage.setItem('ecosphere.auth','1');
-        showOverlay(false);
-        return data;
-      } catch(err){
-        throw err;
+      setLoginError('');
+      let lastErr = null;
+      for(const base of API_ENDPOINTS){
+        const url = base ? `${base}/api/auth/login` : `/api/auth/login`;
+        try{
+          const res = await fetch(url, {
+            method: 'POST', headers: { 'Content-Type':'application/json' },
+            body: JSON.stringify({ email, password })
+          });
+          const data = await res.json();
+          if(!res.ok) { lastErr = data.error || `HTTP ${res.status}`; continue; }
+          // success
+          localStorage.setItem('ecosphere.token', data.token);
+          localStorage.setItem('ecosphere.user', JSON.stringify(data.user));
+          localStorage.setItem('ecosphere.auth','1');
+          showOverlay(false);
+          setLoginError('');
+          return data;
+        } catch(err){
+          lastErr = err.message || String(err);
+          // try next endpoint
+          continue;
+        }
       }
+      // all endpoints failed
+      setLoginError('Unable to reach backend: ' + (lastErr || 'network error'));
+      return Promise.reject(lastErr);
     }
 	
     form?.addEventListener('submit', async function(e){
