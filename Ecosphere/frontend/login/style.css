@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+.left{
+    width:50%;
+    background:url("images/forest.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.logo{
+    width:150px;
+}
+
+.left h1{
+    font-size:52px;
+    line-height:65px;
+    margin-top:60px;
+}
+
+.left p{
+    width:80%;
+    margin-top:20px;
+}
+
+.bottom{
+    display:flex;
+    gap:60px;
+}
+
+.bottom h2{
+    font-size:30px;
+}
+
+.bottom span{
+    font-size:13px;
+}
+
+.right{
+    width:50%;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:80px;
+}
+
+.right h1{
+    margin-bottom:10px;
+}
+
+.right p{
+    color:gray;
+    margin-bottom:30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+input{
+    padding:14px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.pass{
+    display:flex;
+    justify-content:space-between;
+}
+
+.pass a{
+    color:#2e7d32;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.remember input{
+    margin:0;
+}
+
+button{
+    padding:15px;
+    border:none;
+    background:#4CAF50;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.line{
+    text-align:center;
+    margin:30px 0;
+    color:gray;
+}
+
+.google{
+    background:white;
+    color:black;
+    border:1px solid #ccc;
+}
+
+.signup{
+    margin-top:25px;
+    text-align:center;
+}
+
+.signup a{
+    color:#2e7d32;
+    text-decoration:none;
+    font-weight:600;
+}
