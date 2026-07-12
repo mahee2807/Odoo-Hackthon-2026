@@ -13,4 +13,15 @@ body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;background:var
 .app-pane iframe{width:100%;height:calc(100vh - 64px);border:none}
 .hidden{display:none}
 
+/* Login overlay */
+.login-overlay{position:fixed;inset:0;background:rgba(15,23,42,0.6);display:flex;align-items:center;justify-content:center;z-index:999}
+.login-card{background:#fff;padding:28px;border-radius:12px;min-width:320px;max-width:420px;box-shadow:0 12px 40px rgba(2,6,23,0.4)}
+.login-card h2{margin:0 0 14px 0}
+.login-card label{display:block;font-size:13px;color:#374151;margin-top:8px}
+.login-card input[type="email"],.login-card input[type="password"]{width:100%;padding:12px;margin-top:6px;border:1px solid #e5e7eb;border-radius:8px}
+.pass-row{display:flex;justify-content:space-between;align-items:center}
+.remember-row{display:flex;align-items:center;gap:8px;margin:10px 0}
+
+@media(max-width:520px){.login-card{width:92%;min-width:unset;padding:18px}}
+
 @media(max-width:900px){.app-topbar{flex-direction:column;align-items:flex-start}.app-tabs{margin-top:8px}}
