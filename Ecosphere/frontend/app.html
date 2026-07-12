@@ -7,9 +7,34 @@
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-card">
+      <h2>Sign in to EcoSphere</h2>
+      <form id="app-login-form">
+        <label for="login-email">Email Address</label>
+        <input id="login-email" type="email" placeholder="name@company.com" required>
+
+        <div class="pass-row">
+          <label for="login-password">Password</label>
+          <a href="#">Forgot?</a>
+        </div>
+        <input id="login-password" type="password" placeholder="********" required>
+
+        <div class="remember-row">
+          <input id="login-remember" type="checkbox">
+          <label for="login-remember">Remember me for 30 days</label>
+        </div>
+
+        <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+          <button type="button" id="demo-signin" class="btn btn--dark">Demo Sign-In</button>
+          <button type="submit" class="btn btn--green">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
   <header class="app-topbar">
     <div class="left">
-      <img src="login/images/logo.png" class="logo" alt="EcoSphere">
+      <img src="login/images/logo.svg" class="logo" alt="EcoSphere">
       <h1>EcoSphere</h1>
     </div>
     <nav class="app-tabs">
