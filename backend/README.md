@@ -23,3 +23,21 @@ Environment
 
 - `PORT` (default 3000)
 - `JWT_SECRET` (default `dev_secret_change_me`)
+
+Seeding demo user
+
+1. Install dependencies and run the seed script to insert a demo user:
+
+```bash
+cd backend
+npm install
+node seed.js
+```
+
+The seeded demo credentials:
+
+- Email: `demo@ecos.com`
+- Password: `password123`
+
+If your system doesn't have Node.js installed, install Node 16+ and npm first.
+
