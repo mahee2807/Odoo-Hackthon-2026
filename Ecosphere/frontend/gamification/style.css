@@ -1,0 +1,21 @@
+:root{--bg:#fffaf6;--accent:#ef6c00;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f1724}
+.topbar{display:flex;align-items:center;padding:12px 18px;background:linear-gradient(180deg,#23282b,#2b2f33);color:#fff}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px}
+.container{padding:18px}
+.controls{margin-bottom:12px}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+.btn--orange{background:var(--accent);color:#fff}
+.tabs-status{display:flex;gap:8px;margin-bottom:14px}
+.status-pill{padding:8px 12px;border-radius:8px;background:#fff;border:2px solid rgba(0,0,0,0.06);font-weight:700}
+.status-pill.active{background:#ffe9d6;border-color:var(--accent)}
+.challenges{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:18px}
+.challenge{background:#fff;padding:14px;border-radius:16px;border:2px solid rgba(239,108,0,0.12)}
+.badges-leaderboard{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+.badge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.badge-card{background:#fff7f0;padding:12px;border-radius:12px;border:2px solid rgba(239,108,0,0.12)}
+.leaderboard{background:#fff;padding:14px;border-radius:12px;border:1px solid rgba(0,0,0,0.04)}
+
+@media(max-width:900px){.badges-leaderboard{grid-template-columns:1fr}.challenges{grid-template-columns:1fr}}
