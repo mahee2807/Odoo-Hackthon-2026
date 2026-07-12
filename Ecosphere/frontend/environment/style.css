@@ -1,0 +1,36 @@
+:root{--bg:#f4f6f8;--card:#fff;--muted:#6b7280;--accent:#2e7d32}
+*{box-sizing:border-box}
+body{font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:#0f1724;margin:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(180deg,#23282b,#2b2f33);color:#fff}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;object-fit:contain}
+.brand-title{font-weight:700}
+.tabs{display:flex;gap:8px}
+.tabs a{padding:8px 12px;border-radius:6px;color:#d1d5db;text-decoration:none;font-weight:600}
+.tabs a.active{background:#fff;color:#111}
+.container{padding:20px}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.left-controls{display:flex;gap:10px;align-items:center}
+.right-controls{display:flex;align-items:center}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+.btn--green{background:#2e7d32;color:#fff}
+.btn--amber{background:#f59e0b;color:#fff}
+.btn--red{background:#ef4444;color:#fff}
+.btn--dark{background:#374151;color:#fff}
+.search{padding:10px 12px;border-radius:10px;border:1px solid #e5e7eb;min-width:220px}
+.table-wrap{background:transparent}
+.goals-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 6px 16px rgba(15,23,42,0.06)}
+.goals-table thead{background:#f3f4f6;color:#374151}
+.goals-table th,.goals-table td{padding:12px 16px;text-align:left;border-bottom:1px solid rgba(0,0,0,0.04);font-size:14px}
+.goals-table tbody tr:last-child td{border-bottom:none}
+.progress{background:#eef2f7;border-radius:999px;height:12px;width:160px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:8px}
+.bar{height:100%;border-radius:999px}
+.bg-green{background:linear-gradient(90deg,#2e7d32,#4caf50)}
+.progress-label{font-weight:600;color:#374151}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:700;border:2px solid transparent}
+.badge--active{background:#e6fff0;color:#1b5e20;border-color:#2e7d32}
+.badge--ontrack{background:#fff8e6;color:#9a5800;border-color:#f59e0b}
+.badge--completed{background:#e8f3ff;color:#0b5394;border-color:#60a5fa}
+.hint{color:var(--muted);font-size:13px;margin-top:10px}
+
+@media(max-width:900px){.controls{flex-direction:column;align-items:stretch;gap:10px}.left-controls{flex-wrap:wrap}}

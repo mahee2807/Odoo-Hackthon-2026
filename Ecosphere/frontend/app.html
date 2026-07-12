@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoSphere: App</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="app-topbar">
+    <div class="left">
+      <img src="login/images/logo.png" class="logo" alt="EcoSphere">
+      <h1>EcoSphere</h1>
+    </div>
+    <nav class="app-tabs">
+      <button class="tab active" data-target="dashboard">Dashboard</button>
+      <button class="tab" data-target="environment">Environmental</button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <div id="dashboard" class="app-pane">
+      <iframe src="dashboard/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="environment" class="app-pane hidden">
+      <iframe src="environment/index.html" frameborder="0"></iframe>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

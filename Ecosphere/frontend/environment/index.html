@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoSphere: Environmental Goals</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <img src="../login/images/logo.png" alt="EcoSphere" class="logo">
+      <span class="brand-title">EcoSphere: Environmental</span>
+    </div>
+    <nav class="tabs">
+      <a>Dashboard</a>
+      <a class="active">Environmental</a>
+      <a>Social</a>
+      <a>Governance</a>
+      <a>Reports</a>
+      <a>Settings</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <div class="controls">
+      <div class="left-controls">
+        <button class="btn btn--green" id="new-goal">+ New Goal</button>
+        <button class="btn btn--amber" id="edit-goal">Edit</button>
+        <button class="btn btn--red" id="delete-goal">Delete</button>
+        <div class="dropdown">
+          <button class="btn btn--dark">Export ▾</button>
+        </div>
+      </div>
+
+      <div class="right-controls">
+        <input id="search" class="search" placeholder="Search goals...">
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="goals-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Target CO₂</th>
+            <th>Current CO₂</th>
+            <th>Progress</th>
+            <th>Deadline</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="goals-body">
+          <tr>
+            <td>Reduce Fleet Emissions</td>
+            <td>Logistics</td>
+            <td>500 t</td>
+            <td>390 t</td>
+            <td>
+              <div class="progress">
+                <div class="bar bg-green" style="width:78%"></div>
+              </div>
+              <span class="progress-label">78%</span>
+            </td>
+            <td>2026-12-31</td>
+            <td><span class="badge badge--active">Active</span></td>
+          </tr>
+
+          <tr>
+            <td>Cut Packaging Waste</td>
+            <td>Manufacturing</td>
+            <td>120 t</td>
+            <td>98 t</td>
+            <td>
+              <div class="progress"><div class="bar bg-green" style="width:82%"></div></div>
+              <span class="progress-label">82%</span>
+            </td>
+            <td>2026-09-30</td>
+            <td><span class="badge badge--ontrack">On Track</span></td>
+          </tr>
+
+          <tr>
+            <td>Office Energy Cut</td>
+            <td>Corporate</td>
+            <td>80 t</td>
+            <td>80 t</td>
+            <td>
+              <div class="progress"><div class="bar bg-green" style="width:100%"></div></div>
+              <span class="progress-label">100%</span>
+            </td>
+            <td>2026-06-30</td>
+            <td><span class="badge badge--completed">Completed</span></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="hint">Row actions: View • Edit • Delete • Carbon Transactions auto-generated from Purchase/Manufacturing/Fleet/Expenses</p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
