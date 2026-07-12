@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EcoSphere: Dashboard</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="../login/images/logo.png" alt="EcoSphere" class="logo">
+            <span class="brand-title">EcoSphere: Dashboard</span>
+        </div>
+
+        <nav class="tabs">
+            <a class="active">Dashboard</a>
+            <a>Environmental</a>
+            <a>Social</a>
+            <a>Governance</a>
+            <a>Gamification</a>
+            <a>Reports</a>
+            <a>Settings</a>
+        </nav>
+    </header>
+
+    <main class="page">
+
+        <section class="kpi-row">
+            <div class="kpi kpi--green">
+                <div class="kpi-title">Environmental Score</div>
+                <div class="kpi-value">82 <span class="muted">/ 100</span></div>
+            </div>
+
+            <div class="kpi kpi--blue">
+                <div class="kpi-title">Social Score</div>
+                <div class="kpi-value">74 <span class="muted">/ 100</span></div>
+            </div>
+
+            <div class="kpi kpi--purple">
+                <div class="kpi-title">Governance Score</div>
+                <div class="kpi-value">88 <span class="muted">/ 100</span></div>
+            </div>
+
+            <div class="kpi kpi--teal">
+                <div class="kpi-title">Overall ESG Score</div>
+                <div class="kpi-value">81 <span class="muted">/ 100</span></div>
+            </div>
+        </section>
+
+        <section class="grid">
+
+            <div class="card card--large">
+                <div class="card-title">Emissions Trend (12 mo)</div>
+                <div class="chart chart-line">
+                    <!-- simple decorative SVG line chart -->
+                    <svg viewBox="0 0 600 140" preserveAspectRatio="xMidYMid meet">
+                        <polyline fill="none" stroke="#2e7d32" stroke-width="4" points="20,120 80,90 140,70 200,60 260,75 320,95 380,80 440,60 500,70 560,90" />
+                        <!-- arrowheads -->
+                        <g fill="#2e7d32">
+                            <polygon points="74,86 84,92 76,98" />
+                            <polygon points="494,76 504,82 496,88" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="card card--large">
+                <div class="card-title">Department ESG Ranking</div>
+                <div class="chart chart-bars">
+                    <svg viewBox="0 0 600 140" preserveAspectRatio="xMidYMid meet">
+                        <rect x="30" y="60" width="60" height="70" rx="8" fill="#b3e5fc" stroke="#7fbfe8" />
+                        <rect x="120" y="30" width="60" height="100" rx="8" fill="#b3e5fc" stroke="#7fbfe8" />
+                        <rect x="210" y="45" width="60" height="85" rx="8" fill="#b3e5fc" stroke="#7fbfe8" />
+                        <rect x="300" y="10" width="60" height="120" rx="8" fill="#b3e5fc" stroke="#7fbfe8" />
+                        <rect x="390" y="55" width="60" height="75" rx="8" fill="#b3e5fc" stroke="#7fbfe8" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Recent Activity</div>
+                <ul class="activity">
+                    <li>Priya completed 'Zero Waste Week'</li>
+                    <li>New compliance issue in Logistics</li>
+                    <li>42 new Carbon Transactions logged</li>
+                    <li>R&D acknowledged Anti-Corruption Policy</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Quick Actions</div>
+                <div class="actions">
+                    <button class="btn btn--green" id="log-data">+ Log Carbon Data</button>
+                    <button class="btn btn--orange" id="start-challenge">🏆 Start Challenge</button>
+                    <button class="btn btn--dark" id="view-reports">📄 View Reports</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
