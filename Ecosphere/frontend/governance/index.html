@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoSphere: Governance</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../login/images/logo.png" class="logo" alt="EcoSphere">
+      <span class="brand-title">EcoSphere: Governance</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="controls">
+      <button class="btn btn--purple" id="new-audit">+ New Audit</button>
+      <div class="dropdown"><button class="btn btn--dark">Export ▾</button></div>
+    </div>
+
+    <section class="audits">
+      <h2>Audits</h2>
+      <table class="audits-table">
+        <thead><tr><th>Title</th><th>Department</th><th>Auditor</th><th>Date</th><th>Findings</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Q2 Waste Audit</td><td>Manufacturing</td><td>S. Nair</td><td>2026-06-12</td><td>3 minor issues</td><td><span class="badge badge--completed">Completed</span></td></tr>
+          <tr><td>Vendor Compliance Check</td><td>Procurement</td><td>R. Iyer</td><td>2026-07-01</td><td>1 open issue</td><td><span class="badge badge--review">Under Review</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="issues">
+      <h2>Compliance Issues</h2>
+      <table class="issues-table">
+        <thead><tr><th>Issue</th><th>Severity</th><th>Department</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Missing MSDS sheets</td><td><span class="pill pill--high">High</span></td><td>Manufacturing</td><td><span class="badge badge--open">Open</span></td></tr>
+          <tr><td>Late vendor disclosure</td><td><span class="pill pill--medium">Medium</span></td><td>Procurement</td><td><span class="badge badge--resolved">Resolved</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  <script src="script.js"></script>
+  </main>
+</body>
+</html>
