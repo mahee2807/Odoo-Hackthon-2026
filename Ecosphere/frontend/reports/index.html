@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoSphere: Reports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../login/images/logo.png" class="logo" alt="EcoSphere">
+      <span class="brand-title">EcoSphere: Reports</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="report-types">
+      <div class="report-card">
+        <h3>🌱 Environmental Report</h3>
+        <p>Emissions, goals, vendor & product breakdown</p>
+        <button class="btn btn--dark" data-generate>Generate</button>
+      </div>
+
+      <div class="report-card">
+        <h3>👥 Social Report</h3>
+        <p>Diversity, CSR participation, training completion</p>
+        <button class="btn btn--dark" data-generate>Generate</button>
+      </div>
+
+      <div class="report-card">
+        <h3>🏛️ Governance Report</h3>
+        <p>Policies, audits, compliance & risk summary</p>
+        <button class="btn btn--dark" data-generate>Generate</button>
+      </div>
+
+      <div class="report-card">
+        <h3>📊 ESG Summary</h3>
+        <p>Executive overview: all 4 scores + dept comparison</p>
+        <button class="btn btn--dark" data-generate>Generate</button>
+      </div>
+    </section>
+
+    <section class="custom-builder">
+      <h3>Custom Report Builder: Filters</h3>
+      <div class="filters">
+        <select class="filter"><option>Date Range ▾</option></select>
+        <select class="filter"><option>Department ▾</option></select>
+        <select class="filter"><option>Module ▾</option></select>
+        <select class="filter"><option>Employee ▾</option></select>
+        <select class="filter"><option>Challenge ▾</option></select>
+        <select class="filter"><option>ESG Category ▾</option></select>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn--run" id="run-report">▶ Run Report</button>
+        <button class="btn btn--outline" id="export-pdf">Export: PDF</button>
+        <button class="btn btn--outline" id="export-excel">Export: Excel</button>
+        <button class="btn btn--outline" id="export-csv">Export: CSV</button>
+      </div>
+    </section>
+
+  <script src="script.js"></script>
+  </main>
+</body>
+</html>
