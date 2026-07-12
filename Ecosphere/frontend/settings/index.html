@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EcoSphere: Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../login/images/logo.png" class="logo" alt="EcoSphere">
+      <span class="brand-title">EcoSphere: Settings</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="tabs">
+      <button class="tab active">Departments</button>
+      <button class="tab">Categories</button>
+      <button class="tab">ESG Configuration</button>
+      <button class="tab">Notification Settings</button>
+    </div>
+
+    <section class="dept-controls">
+      <div class="left">
+        <button class="btn btn--dark" id="new-dept">+ New Department</button>
+        <button class="btn btn--amber" id="edit-dept">Edit</button>
+        <button class="btn btn--red" id="delete-dept">Delete</button>
+      </div>
+    </section>
+
+    <section class="dept-table-wrap">
+      <table class="dept-table">
+        <thead><tr><th>Name</th><th>Code</th><th>Head</th><th>Parent Dept</th><th>Employees</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Manufacturing</td><td>MFC</td><td>S. Nair</td><td>—</td><td>134</td><td><span class="badge badge--active">Active</span></td></tr>
+          <tr><td>Logistics</td><td>LOG</td><td>R. Iyer</td><td>Manufacturing</td><td>—</td><td><span class="badge badge--active">Active</span></td></tr>
+          <tr><td>Corporate</td><td>COF</td><td>A. Mehta</td><td>—</td><td>41</td><td><span class="badge badge--active">Active</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="config">
+      <h3>ESG Configuration & Notifications</h3>
+      <div class="setting"><label class="switch"><input type="checkbox" id="auto-emission"><span class="slider"></span></label><span>Enable auto emission calculation</span></div>
+      <div class="setting"><label class="switch"><input type="checkbox" id="require-evidence"><span class="slider"></span></label><span>Require evidence for all CSR activities</span></div>
+      <div class="setting"><label class="switch"><input type="checkbox" id="auto-badges"><span class="slider"></span></label><span>Auto-award badges on challenge completion</span></div>
+      <div class="setting"><label class="switch"><input type="checkbox" id="email-alerts"><span class="slider"></span></label><span>Email alerts for new compliance issues</span></div>
+    </section>
+
+  <script src="script.js"></script>
+  </main>
+</body>
+</html>
